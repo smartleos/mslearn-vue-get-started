@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Relecloud Galaxy Tours</title>
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- TODO: Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
 
 </head>
 
@@ -13,10 +13,19 @@
     <div class="nav-bar"></div>
     <h1>Relecloud Galaxy Tours</h1>
 
-    <!-- TODO: Add information display -->
+    <div id="app">
+        <h2>{{ productName }}</h2>
+        <div :style="styleObject">{{ productDescription }}</div>
+        <div :class="classObject">傳說中的帶入CSS</div>
+        <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
+        <img :src="imageSource" />
+    </div>
 
     
-    <!-- TODO: Import Vue app -->
+    <script src="./index.js"></script>
+    <script>
+        App.mount('#app');
+    </script>
 
 </body>
 
